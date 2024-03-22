@@ -1,7 +1,7 @@
 import { authMessages } from "./auth/messages";
+import { settings } from "./settings/settings";
 
-const URL = "wss://s-usc1b-nss-2133.firebaseio.com/.ws?v=5&ns=planningpoker-8dc40";
-const socket = new WebSocket(URL);
+const socket = new WebSocket(settings.baseUrl);
 
 // socket opened
 socket.addEventListener("open", (event) => {
