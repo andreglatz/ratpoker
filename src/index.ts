@@ -18,7 +18,10 @@ socket.addEventListener("message", (event) => {
 
   if (isEstimation) {
     const key = Object.keys(data.d.b.d)[0];
-    console.log(`${data.d.b.d[key].estimation}: ${data.d.b.d[key].userName}`);
+    const userName = data.d.b.d[key].userName;
+    const estimation = data.d.b.d[key].estimation;
+
+    console.log(`${userName}: ${estimation}`);
   }
 
   if (isHidden) {
